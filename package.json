@@ -1,0 +1,29 @@
+{
+  "name": "edge3",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node_modules/tapr/bin/tapr.js test/*.js"
+  },
+  "repository": "",
+  "author": "@brianleroux",
+  "license": "Apache2",
+  "readmeFilename": "readme.md",
+  "gitHead": "bfa0ebf140d3aa724b5605a8d291467294af68b2",
+  "devDependencies": {
+    "tape": "~1.0.4",
+    "wrapping-tape": "0.0.2",
+    "tap": "~0.4.4",
+    "shelljs": "~0.2.1",
+    "tapr": "~0.1.3",
+    "grunt": "~0.4.1",
+    "grunt-browserify": "~1.2.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-topdoc": "~0.1.3",
+    "grunt-concurrent": "~0.3.1"
+  },
+  "dependencies": {
+    "harp": "~0.9.1"
+  }
+}
