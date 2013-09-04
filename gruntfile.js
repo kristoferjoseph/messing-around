@@ -1,6 +1,6 @@
 var shell = require('shelljs'),
-    harp  = require('harp'),
-    path  = require('path');
+    harp = require('harp'),
+    path = require('path');
 
 module.exports = function(grunt) {
 
@@ -14,11 +14,20 @@ module.exports = function(grunt) {
         },
 
         topcoat: {
-          options: {
-            theme: 'mobile',
-            variation: 'light',
-            browsers: ['android']
-          }
+            options: {
+                namespace: 'topcoat',
+                theme: 'mobile',
+                variation: 'light',
+                platforms: ['desktop', 'mobile', 'web'],
+                browsers: ['android'],
+                controls: ['button', 'list']
+            },
+
+            firefoxOS: {
+                files: {
+                    dest: 'x.css'
+                }
+            }
         },
 
         watch: {
@@ -28,8 +37,10 @@ module.exports = function(grunt) {
 
         concurrent: {
             target: {
-                tasks:['serve', 'watch'],
-                options:{logConcurrentOutput: true}
+                tasks: ['serve', 'watch'],
+                options: {
+                    logConcurrentOutput: true
+                }
             }
         }
     });
